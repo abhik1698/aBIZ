@@ -1,0 +1,51 @@
+<html>
+<head>
+    <link rel="shortcut icon" href="./res/keyboard.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>@BIZ Projects</title>
+    <style>
+    	body{    		    		
+    		background: linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)), url("./res/bg.jpg");
+    		background-size: cover;
+    	}
+</style>
+</head>
+<body>
+
+	<center>	
+		<div style="width: 55%">
+		    
+		    	<h1>@BIZ</h1>
+		    	<label>No Scam!</label>
+	    </div>
+    </center>
+    <form method="post" action="./upload.php" enctype="multipart/form-data">
+        <div class="container" style="padding:15px;">
+            <center>                                                          
+                <div style="padding:15px;">
+                    <h2>
+                        <input name="name"type="text" style="text-align: center;" placeholder="Name" class="form-control" required />
+                    </h2>
+                    <h2>
+                        <input name="email" type="text" style="text-align: center;" placeholder="Email" class="form-control" />
+                    </h2>
+                    <h2>
+                        <input name="subject" type="text" style="text-align: center;" placeholder="Subject" class="form-control" required />
+                    </h2>
+                    <h2>
+                        <input name="contact" type="text" style="text-align: center;" placeholder="Phone number" class="form-control" required/>
+                    </h2><br><br>
+                    <h2><label>Upload the Synopsis (optional)</label>
+                    </h2>	<input type="file" name="fileToUpload" id="fileToUpload" >
+                </div><br>
+                <b><input type="Submit" style="padding: 14px 40px; border-radius: 12px; "/></b>
+            </center>
+        </div>
+    </form>
+</body>
+</html>
