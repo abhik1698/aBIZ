@@ -72,7 +72,7 @@ $conn->close();
    <body>
       <center>
          <h1>@BIZ</h1>
-         <label>No Scam!</label>
+         <label>Get things done with No Scam!</label>
       </center>
          <?php
             $servername = "localhost";
