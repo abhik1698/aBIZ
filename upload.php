@@ -21,7 +21,7 @@ $contact=  trim($_POST['contact']);
 //File Upload
 $target_dir = "uploads/";
 date_default_timezone_set('Asia/Kolkata');
-$target_file = $target_dir . $name . ' ' . date('m-d-Y_H:i:s');
+$target_file = $target_dir . $name . ' ' . date('d-m-Y_H:i:s');
 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
     } else {
@@ -43,10 +43,7 @@ if ($conn->query($sql) === TRUE) {
 $msg = "Hi " . $name . ", we will contact you soon for your project on " . $subject . " through " .$contact . ".\nThank you for building-a-business with a deal.\n\nBest regards,\nTeam aBIZ,\nBangalore, India";
 
 // send email
-mail($email,"Registration Successfull",trim($msg));
-
-
-$conn->close();
+mail($email,"Registration Successful",trim($msg));
 ?>
 
 <html>
@@ -75,18 +72,6 @@ $conn->close();
          <label>Get things done with No Scam!</label>
       </center>
          <?php
-            $servername = "localhost";
-            $username = "id10788386_abiz";
-            $password = "abizd";
-            $dbname = "id10788386_abiz";
-            
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            } 
-            
             $sql = "SELECT name, email, subject FROM details where email= '$email'";
             $result = $conn->query($sql);
             
